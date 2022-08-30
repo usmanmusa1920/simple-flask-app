@@ -1,0 +1,22 @@
+{% extends 'layout.html' %}
+
+
+{% block title %}
+
+  {% if title %}
+    {{title}}
+  {% endif %}
+
+{% endblock title %}
+
+
+{% block main %}
+
+  <h1>Welcome to homepage</h1>
+  {% for post in posts %}
+    <h1>{{post.title}}</h1>
+    <small>{{post.author}} - posted on - {{post.pub_dae}}</small>
+    <p>{{post.summary}}</p>
+  {% endfor %}
+
+{% endblock main %}
